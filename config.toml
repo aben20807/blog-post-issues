@@ -5,6 +5,8 @@ title = "記錄用"
 theme = "story"
 enableEmoji = true
 enableInlineShortcodes = true
+googleAnalytics = "UA-123296010-2"
+disqusShortname = "forrecording"
 
 # Footer
 
