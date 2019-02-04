@@ -1,0 +1,16 @@
+baseURL = "https://aben20807.github.io/"
+languageCode = "zh-tw"
+title = "記錄用"
+
+theme = "story"
+enableEmoji = true
+enableInlineShortcodes = true
+
+[params]
+  author = "Huang Po-Hsuan"
+  classes = []
+
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/aben20807"
