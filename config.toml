@@ -6,11 +6,47 @@ theme = "story"
 enableEmoji = true
 enableInlineShortcodes = true
 
+# Footer
+
 [params]
-  author = "Huang Po-Hsuan"
-  classes = []
+author = "Huang Po-Hsuan"
+classes = []
+
+# Navbar
+
+[menu]
 
 [[menu.social]]
-  name = "GitHub"
-  title = "fab fa-github-square"
-  url = "https://github.com/aben20807"
+name = "GitHub"
+title = "fab fa-github-square"
+url = "https://github.com/aben20807"
+
+[[menu.main]]
+weight = 1
+name = "首頁"
+title = "首頁"
+url = "/"
+
+[[menu.main]]
+weight = 2
+name = "分類"
+title = "分類"
+url = "/categories/"
+
+[[menu.main]]
+weight = 3
+name = "標籤"
+title = "標籤"
+url = "/tags/"
+
+[[menu.main]]
+weight = 4
+name = "關於"
+title = "關於"
+url = "/about"
+
+# Tools
+
+[taxonomies]
+category = "categories"
+tag = "tags"
