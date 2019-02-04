@@ -4,7 +4,8 @@ date = "2019-02-04T18:07:12+08:00"
 url = "/about"
 image = ""
 credit = ""
-skip = "true"
+skip = true
+comments = true
 +++
 
 # 關於我
