@@ -5,4 +5,5 @@ url = "/{{ .Dir }}{{ .Name }}"
 image = ""
 credit = ""
 comments = true
+draft = true
 +++
