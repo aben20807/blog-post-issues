@@ -52,3 +52,10 @@ url = "/about"
 [taxonomies]
 category = "categories"
 tag = "tags"
+
+[outputs]
+home = ["HTML", "JSON", "RSS"]
+page = ["HTML"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+taxonomyTerm = ["HTML", "RSS"]
