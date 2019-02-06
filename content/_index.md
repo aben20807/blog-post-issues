@@ -1,6 +1,6 @@
 +++
 layout = "index"
 url = "/index/"
-title = "Index"
+title = "記錄用"
 skip = true
 +++
