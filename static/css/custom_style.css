@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'Lora', 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+body, p {
+    font-family: 'Noto Sans', 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+code {
+    font-family: 'Fira Mono', 'Consolas', 'monaco', 'monospace';
+}
