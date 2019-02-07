@@ -4,6 +4,7 @@ title = "記錄用"
 
 theme = "story"
 enableEmoji = true
+pygmentsCodeFences = true           # for code highlighting
 enableInlineShortcodes = true
 googleAnalytics = "UA-123296010-2"
 disqusShortname = "forrecording"
@@ -21,7 +22,7 @@ classes = []
 [[menu.social]]
 name = "GitHub"
 title = "fab fa-github-square"
-url = "https://github.com/aben20807"
+url = "https://github.com/aben20807/blog-post"
 
 [[menu.main]]
 weight = 1
