@@ -2,7 +2,11 @@
 
 {{ define "main" }}
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
-	{{ .Content }}
+  <div id="toc">
+    {{- partial "table-of-contents.html" . -}}
+  </div>
+  <hr/>
+  {{ partial "headline-hash.html" .Content }}
   {{ if not .Params.comments }}
   {{ else }}
     {{ template "_internal/disqus.html" . }}
