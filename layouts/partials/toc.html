@@ -2,17 +2,22 @@
   This partial was modified from the AllinOne theme
   https://github.com/orianna-zzo/AllinOne
 */}}
+{{/* Minimum heading level to include; default is h1. */}}
+{{- $minLevel := 1 -}}
+{{/* Minimum heading level to include; default is h3. */}}
+{{- $maxLevel := 3 -}}
 
 {{ if .Params.toc }}
   <!-- ignore empty links with + -->
-  {{- $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content -}}
+  {{- $regex := printf "<h[%d-%d].*?>(.|\n])+?</h[%d-%d]>" $minLevel $maxLevel $minLevel $maxLevel -}}
+  {{- $headers := findRE $regex .Content -}}
   <!-- at least one header to link to -->
   {{ if ge (len $headers) 1 }}
     {{- $h1_n := len (findRE "<h1.*?>(.|\n])+?</h1>" .Content) -}}
     {{- $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") -}}
     {{- $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") -}}
 
-    <div class="toc toc-nav toc-pills ml-0 col-3" style="line-height: 0.8vw; font-size: small;">
+    <div class="toc toc-nav toc-pills ml-0 col-3">
       {{- range $headers -}}
         {{- $header := . -}}
         {{- range first 1 (findRE $re $header 1) -}}
