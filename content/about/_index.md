@@ -1,4 +1,5 @@
 +++
+layout = "single"
 title = 'About'
 date = "2019-02-04T18:07:12+08:00"
 url = "/about"
@@ -6,6 +7,7 @@ image = ""
 credit = ""
 skip = true
 comments = true
+toc = false
 +++
 
 # 關於我

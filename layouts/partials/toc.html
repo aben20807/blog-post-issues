@@ -1,0 +1,39 @@
+{{/*
+  This partial was modified from the AllinOne theme
+  https://github.com/orianna-zzo/AllinOne
+*/}}
+
+{{ if .Params.toc }}
+  <!-- ignore empty links with + -->
+  {{- $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content -}}
+  <!-- at least one header to link to -->
+  {{ if ge (len $headers) 1 }}
+    {{- $h1_n := len (findRE "<h1.*?>(.|\n])+?</h1>" .Content) -}}
+    {{- $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") -}}
+    {{- $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") -}}
+
+    <div class="toc toc-nav toc-pills ml-0 col-3" style="line-height: 0.8vw; font-size: small;">
+      {{- range $headers -}}
+        {{- $header := . -}}
+        {{- range first 1 (findRE $re $header 1) -}}
+          {{- range findRE $renum . 1 -}}
+            {{- $next_heading := (cond (eq $h1_n 0) (sub (int .) 1 ) (int . ) ) -}}
+            {{- range seq $next_heading -}}
+              <ul class="toc">
+            {{- end -}}
+            {{- $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) -}}
+                <li class="toc-item">
+                  <a class="toc-link" href="#{{ $anchorId }}">
+                     {{ $header | plainify | htmlUnescape }}
+                  </a>
+                </li>
+            <!-- close list -->
+            {{- range seq $next_heading -}}
+              </ul>
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+     {{- end -}}
+    </div>
+  {{- end -}}
+{{- end -}}

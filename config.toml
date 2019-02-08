@@ -3,6 +3,7 @@ languageCode = "zh-tw"
 title = "記錄用"
 
 theme = "story"
+DefaultContentLanguage = "zh"
 enableEmoji = true
 pygmentsCodeFences = true           # for code highlighting
 enableInlineShortcodes = true

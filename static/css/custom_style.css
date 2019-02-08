@@ -7,3 +7,64 @@ body, p {
 code {
     font-family: 'Fira Mono', 'Consolas', 'monaco', 'monospace';
 }
+
+.row {
+    display: flex;
+}
+.col-1 {
+    float: left;
+    flex: 80%;
+}
+@media screen and (max-width: 600px) {
+    .col-2 {
+        display: none;
+    }
+}
+.col-2 {
+    float: left;
+    flex: 16.666667%;
+    max-width: 16.666667%;
+    padding-top: 2vw;
+    padding-right: 2vw;
+}
+
+.toc-nav ul {
+    list-style: none;
+    padding-left: 1.0vw;
+}
+
+.toc-nav li, .toc-nav ul {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+.toc-nav .nav-item, .toc-nav .toc-link {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+    padding: 0 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: var(--text-grey);
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.toc-nav a.toc-link:hover {
+    background-color: transparent;
+    border-left: .025rem solid var(--active-color);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--active-color);
+}
+
+
+.toc-nav a.toc-link.active, .toc-nav a.toc-link:active {
+    background-color: transparent;
+    color: var(--active-color);
+    border-left: .125rem solid var(--active-color);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 700;
+}

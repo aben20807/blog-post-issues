@@ -1,17 +1,21 @@
 {{ define "title" }}{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}{{ end }}
 
 {{ define "main" }}
-<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
-  <div id="toc">
-    {{- partial "table-of-contents.html" . -}}
+<div class="row bg-white">
+  <div class="column col-1">
+    <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+    {{- partial "headline-hash.html" .Content -}}
+    {{- if .Params.comments -}}
+      {{- template "_internal/disqus.html" . -}}
+    {{- end -}}
+  </article>
   </div>
-  <hr/>
-  {{ partial "headline-hash.html" .Content }}
-  {{ if not .Params.comments }}
-  {{ else }}
-    {{ template "_internal/disqus.html" . }}
-  {{ end }}
-</article>
+  {{- if .Params.toc -}}
+  <div id="toc" class="column col-2">
+    {{- partial "toc.html" . -}}
+  </div>
+  {{- end -}}
+</div>
 {{ end }}
 
 {{ define "social" }}
