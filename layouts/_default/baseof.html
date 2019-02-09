@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="{{ "css/story.css" | absURL }}" />
 		<link rel="stylesheet" href="{{ "css/descartes.css" | absURL }}" />
 		<link rel="stylesheet" href="{{ "css/custom_style.css" | absURL }}" />
+		<link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
 		{{ end }}
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i|Fira+Mono|Lora|Noto+Sans&amp;subset=latin-ext" rel="stylesheet">
@@ -100,7 +101,7 @@
 									{{- .Date.Format "Jan 2, 2006" -}}
 								</time>
 								<span class="display-print">by {{ .Params.author | default .Site.Params.author }}</span>
-								{{ range $idx, $cat := .Params.categories }}{{ if gt $idx 0 }}, {{ end }}{{ if eq $idx 0 }} in {{ end }}<a href="{{ "categories" | absURL }}/{{ . | urlize }}" class="no-underline category {{ cond $hdr "near-white dim" "black hover-gray" }}">{{ . | title }}</a>{{ end }}
+								{{ range $idx, $cat := .Params.categories }}{{ if gt $idx 0 }}, {{ end }}{{ if eq $idx 0 }} in {{ end }}<a href="{{ "categories" | absURL }}/{{ . | urlize }}" class="no-underline category title-link {{ cond $hdr "near-white dim" "black hover-gray" }}">{{ . | title }}</a>{{ end }}
 								<span class="display-print">at {{ .Permalink }}</span>
 							{{ end }}
 						{{ else }}
@@ -125,14 +126,20 @@
 		{{ block "main" . }}
 		{{ end }}
 		</main>
-		{{ block "about" . }}
-			{{ partial "about.html" . }}
-		{{ end }}
+		<!-- {{ block "about" . }} -->
+			<!-- {{ partial "about.html" . }} -->
+		<!-- {{ end }} -->
 		{{ block "pagination" . }}{{ end }}
 		{{ block "footer" . }}
-		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3 db overflow-auto" role="contentinfo">
 			<p class="w-50 fr tr">
-			<a class="no-underline near-white" href="https://github.com/xaprb/story"><img class="dib" title="Made with Hugo and Story" alt="Story logo" src="{{ "img/story-logo-white.svg" | absURL }}" style="width: 1.5rem; height: 1.5rem" /></a>
+      Theme is made up of
+      <a class="no-underline" href='https://github.com/xaprb/story' target="_blank">story</a> by
+      <a class="no-underline" href='https://github.com/xaprb' target="_blank">xaprb</a>
+      and
+      <a class="no-underline" href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by
+      <a class="no-underline" href='https://github.com/orianna-zzo' target="_blank">Orianna</a>
+      .
 			</p>
 			<p class="w-50 near-white">
 				&copy; {{ now.Format "2006" }} {{ with .Site.Params.author }}{{ . }}{{ end }}

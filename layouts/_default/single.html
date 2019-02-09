@@ -4,11 +4,24 @@
 <div class="row bg-white">
   <div class="column col-1">
     <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
-    {{- partial "headline-hash.html" .Content -}}
-    {{- if .Params.comments -}}
-      {{- template "_internal/disqus.html" . -}}
-    {{- end -}}
-  </article>
+      {{- partial "headline-hash.html" .Content -}}
+      <!-- Tags -->
+      <div class="row">
+        <div class="col-md-8">
+        {{ if .Params.tags }}
+          <div class="mb-5">
+            {{ partial "tags.html" . }}
+          </div>
+        {{ end }}
+        </div>
+      </div>
+      <!-- /.Tags -->
+      <!-- Disqus -->
+      {{- if .Params.comments -}}
+        {{- template "_internal/disqus.html" . -}}
+      {{- end -}}
+      <!-- /.Disqus -->
+    </article>
   </div>
   {{- if .Params.toc -}}
   <div id="toc" class="column col-2">
