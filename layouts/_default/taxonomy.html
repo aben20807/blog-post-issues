@@ -14,7 +14,7 @@
     <!-- <div class="content"> -->
     <div class="col-md-9 mt-3">
       <ul>
-        <div class="div-x">
+        <!-- <div class="div-x">
             {{ partial "page-heading.html" . }}
             {{ $page_num := (len .Data.Pages)}}
             {{ if gt $page_num 0 }}
@@ -23,7 +23,7 @@
                 {{ i18n "postCount" $page_num }}
               </div>
             {{ end }}
-          </div>
+          </div> -->
 
         {{ if .Content }}
           <div class="post-content markdown">
@@ -54,7 +54,6 @@
       </ul>
     </div>
     <!-- /.Post list -->
-
   </div>
 </main>
 {{ end }}
