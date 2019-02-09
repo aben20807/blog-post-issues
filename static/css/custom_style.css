@@ -53,7 +53,7 @@ code {
     font-weight: 400;
     line-height: 1.4rem;
     padding: 0 5px;
-    color: #333333;
+    color: #666666;
     -webkit-border-radius: 0;
     border-radius: 0;
     text-decoration: none;
@@ -90,4 +90,13 @@ code {
 
 main {
     min-height:80vh;
+}
+
+#gotop {
+  cursor: pointer;
+  color: #666666;
+}
+
+#gotop:hover {
+    color: #38849e;
 }

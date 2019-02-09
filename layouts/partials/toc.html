@@ -31,7 +31,7 @@
             {{- end -}}
             {{- $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) -}}
                 <li class="toc-item">
-                  <a class="toc-link" href="#{{ $anchorId }}">
+                  <a class="toc-link smoothScroll" href="#{{ $anchorId }}">
                      {{ $header | plainify | htmlUnescape }}
                   </a>
                 </li>
@@ -41,7 +41,10 @@
             {{- end -}}
           {{- end -}}
         {{- end -}}
-     {{- end -}}
+      {{- end -}}
+      <li class="nav-item pa3-ns">
+        {{ partial "gotop.html" . }}
+      </li>
     </div>
   {{- end -}}
 {{- end -}}

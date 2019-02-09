@@ -1,2 +1,2 @@
 <script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
-{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="headline-hash" style="font-size: 1.2vw; color: black;" href="#${2}"><span class="iconify" data-icon="octicon-link" data-inline="false"></span></a> ${3}` | safeHTML }}
+{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="headline-hash smoothScroll" style="font-size: 1.2vw; color: black;" href="#${2}"><span class="iconify" data-icon="octicon-link" data-inline="false"></span></a> ${3}` | safeHTML }}
