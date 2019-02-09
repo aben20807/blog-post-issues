@@ -6,7 +6,7 @@ description = ""
 image = ""
 credit = ""
 thumbnail = ""
-categories = ["Daily"]
+categories = ["日常"]
 tags = []
 comments = true
 +++
