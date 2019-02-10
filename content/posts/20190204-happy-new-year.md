@@ -1,7 +1,7 @@
 +++
 title = 'Happy New Year'
 date = "2019-02-04T23:03:48+08:00"
-url = "/posts/happy-new-year"
+url = "/posts/20190204-happy-new-year"
 description = ""
 image = ""
 credit = ""
