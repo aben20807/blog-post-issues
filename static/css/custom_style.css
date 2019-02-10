@@ -107,3 +107,7 @@ main {
 .hover-show:hover {
     opacity: 1.0;
 }
+
+.gphoto-media {
+    margin-bottom: 2rem;
+}
