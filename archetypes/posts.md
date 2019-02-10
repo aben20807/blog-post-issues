@@ -1,5 +1,5 @@
 +++
-title = '{{ replace .TranslationBaseName "-" " " | title }}'
+title = '{{ replace ( slicestr .TranslationBaseName 9 ) "-" " " | title }}'
 date = "{{ .Date }}"
 url = "/{{ .Dir }}{{ .Name }}"
 description = ""
