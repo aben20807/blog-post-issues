@@ -100,3 +100,10 @@ main {
 #gotop:hover {
     color: #38849e;
 }
+
+.hover-show {
+    opacity: 0.0;
+}
+.hover-show:hover {
+    opacity: 1.0;
+}
