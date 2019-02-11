@@ -6,6 +6,12 @@ body, p {
 }
 code {
     font-family: 'Fira Mono', 'Consolas', 'monaco', 'monospace';
+    max-width: 100%;
+    height: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .row {
@@ -14,6 +20,7 @@ code {
 .col-1 {
     float: left;
     flex: 80%;
+    max-width: 100%;
 }
 @media screen and (max-width: 600px) {
     .col-2 {
