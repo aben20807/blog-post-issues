@@ -9,7 +9,7 @@ thumbnail = ""
 comments = true
 categories = ["Blog"]
 tags = ["小技巧"]
-draft = true
+draft = false
 toc = true
 skip = true
 +++
