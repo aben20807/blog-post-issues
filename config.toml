@@ -25,11 +25,15 @@ name = "GitHub"
 title = "fab fa-github-square"
 url = "https://github.com/aben20807/blog-post"
 
-[[menu.main]]
-weight = 1
-name = "首頁"
-title = "首頁"
-url = "/"
+[[menu.social]]
+name = "YouTube"
+title = "fab fa-youtube-square"
+url = "https://www.youtube.com/channel/UCEiQdnpoVJcaca7jWlPjEdw"
+
+[[menu.social]]
+name = "Linkedin"
+title = "fab fa-linkedin"
+url = "https://www.linkedin.com/in/po-hsuan-huang-6587b6117/"
 
 [[menu.main]]
 weight = 2
