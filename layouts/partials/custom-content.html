@@ -1,6 +1,6 @@
 {{/* headline hash */}}
 <script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
-{{ $tmp := . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="headline-hash smoothScroll hover-show" style="font-size: 1.0rem; color: black;" href="#${2}"><span class="iconify" data-icon="octicon-link" data-inline="false"></span></a> ${3}` | safeHTML }}
+{{ $tmp := . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="headline-hash smoothScroll hover-show scrollspy" style="font-size: 1.0rem; color: black;" href="#${2}"><span class="iconify" data-icon="octicon-link" data-inline="false"></span></a> ${3}` | safeHTML }}
 
 {{/* google drive image */}}
 {{/*

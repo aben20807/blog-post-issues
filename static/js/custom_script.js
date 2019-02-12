@@ -1,3 +1,4 @@
+/* Detect if is mobile */
 var isMobile = false; //initiate as false
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -5,6 +6,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
+/* Change title */
 jQuery(document).ready(function( $ ) {
   if (isMobile)
     return;
@@ -25,4 +27,21 @@ jQuery(document).ready(function( $ ) {
     }
 	  setTimeout(original, 1000);
 	});
+});
+
+/* Scrollspy */
+$(window).bind('scroll', function() {
+    var currentTop = $(window).scrollTop();
+    var elems = $('.scrollspy');
+    elems.each(function(index) {
+      var elemTop = $(this).offset().top - 20;
+      var elemBottom = elemTop + $(this).height();
+      if(currentTop >= elemTop && currentTop <= elemBottom) {
+        // handle chinese heading
+        var href = encodeURI($(this).attr('href')).toLowerCase();
+        var nowElem = $('a.toc-link[href="' + href + '"');
+        $('a.toc-link').removeClass('active');
+        nowElem.addClass('active');
+      }
+    })
 });

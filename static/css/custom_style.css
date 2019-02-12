@@ -78,8 +78,8 @@ img {
 
 .toc-nav a.toc-link.active, .toc-nav a.toc-link:active {
     background-color: transparent;
-    color: #333333;
-    border-left: .125rem solid #333333;
+    color: #38849e;
+    border-left: .125rem solid #38849e;
     -webkit-box-shadow: none;
     box-shadow: none;
     font-weight: 700;
