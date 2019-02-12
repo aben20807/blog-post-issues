@@ -1,24 +1,22 @@
-<a id='gotop'>&lt;Back to top&gt;</a>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js'></script>
+<div>
+  <a class='goto' id='gotop'>Back to top</a>
+</div>
+<div>
+  <a class='goto' id='gobottom'>Go to bottom</a>
+</div>
 <script type='text/javascript'>
- // https://stackoverflow.com/a/12714767/6734174
-  $(".smoothScroll").click(function(event){
-    event.preventDefault();
-    //calculate destination place
-    var dest=0;
-    if($(decodeURI(this.hash)).offset().top > $(document).height()-$(window).height()){
-      dest=$(document).height()-$(window).height();
-    }else{
-      dest=$(decodeURI(this.hash)).offset().top;
-    }
-    //go to destination
-    $('html,body').animate({scrollTop:dest}, 500,'swing');
-
-    // https://forum.jquery.com/topic/bind-a-click-then-continue#14737000002208582
-    window.location = $(this).attr("href");
-  });
-
+  // https://stackoverflow.com/a/12714767/6734174
+var url = "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js";
+$.getScript( url, function() {
   $("#gotop").click(function(event){
-    $('html,body').animate({scrollTop:0}, 500,'swing');
+    $('html,body').animate({scrollTop:0}, 300,'swing', function() {
+      $('a.toc-link').removeClass('active');
+    });
   });
+  $("#gobottom").click(function(event){
+    $('html,body').animate({scrollTop:$(document).height()}, 300,'swing', function() {
+      $('a.toc-link').removeClass('active');
+    });
+  });
+});
 </script>

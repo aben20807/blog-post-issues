@@ -99,12 +99,13 @@ main {
     min-height:80vh;
 }
 
-#gotop {
-  cursor: pointer;
-  color: #666666;
+.goto {
+    cursor: pointer;
+    color: #666666;
+    padding-left: .7rem;
 }
 
-#gotop:hover {
+.goto:hover {
     color: #38849e;
 }
 

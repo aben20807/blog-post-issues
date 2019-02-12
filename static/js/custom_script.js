@@ -29,6 +29,27 @@ jQuery(document).ready(function( $ ) {
 	});
 });
 
+/* Smooth scroll */
+var url = "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js";
+$.getScript( url, function() {
+  $(".smoothScroll").click(function(event){
+    event.preventDefault();
+    //calculate destination place
+    var dest=0;
+    if($(decodeURI(this.hash)).offset().top > $(document).height()-$(window).height()){
+      dest=$(document).height()-$(window).height();
+    }else{
+      dest=$(decodeURI(this.hash)).offset().top;
+    }
+    //go to destination
+    $('html,body').animate({scrollTop:dest}, 300, 'swing');
+
+    // https://forum.jquery.com/topic/bind-a-click-then-continue#14737000002208582
+    window.location = $(this).attr("href");
+  });
+});
+
+
 /* Scrollspy */
 $(window).bind('scroll', function() {
     var currentTop = $(window).scrollTop();
