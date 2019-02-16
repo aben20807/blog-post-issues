@@ -5,7 +5,8 @@ body, p {
     font-family: 'Noto Sans', 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 }
 code {
-    font-family: 'Fira Mono', 'Consolas', 'monaco', 'monospace';
+    font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', 'monaco', 'monospace';
+    font-size: .9rem !important;
     max-width: 100%;
     height: auto;
 }
