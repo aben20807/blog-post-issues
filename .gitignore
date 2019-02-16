@@ -3,3 +3,4 @@ public/
 
 # tamp files
 *.swp
+tmp/
