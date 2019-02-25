@@ -10,6 +10,9 @@ code {
     max-width: 100%;
     height: auto;
 }
+p {
+    line-height: 1.55rem;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -30,6 +33,10 @@ img {
     .side-bar {
         display: none;
     }
+}
+.side-bar {
+    max-width: 20%;
+    line-height: 0.1rem;
 }
 .col-2 {
     float: left;

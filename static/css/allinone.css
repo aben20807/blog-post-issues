@@ -166,7 +166,7 @@ a:active .active-color  {
   color: var( --text-light);
   font-size: 0.85rem;
   font-weight: 400;
-  line-height: 1.1rem;
+  line-height: 1.25rem;
   list-style: none;
   padding-left: 0;
   padding-right: 0;

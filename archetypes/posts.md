@@ -9,6 +9,7 @@ thumbnail = ""
 comments = true
 categories = ["Uncategorized"]
 tags = ["Untaged"]
+toc = false
 draft = true
 +++
 
