@@ -10,3 +10,22 @@ I have to thank them for providing good themes and giving those MIT license so t
 # Wishlist
 
 You can submit the issue [here](https://github.com/aben20807/blog-post/issues).
+
+# Tools
+
+## hued
+
++ An editor make you edit the post file easily with completion that skip the middle directories.
++ Notice: some parts are hardcode. the directory is "content/posts/"
+
+### Install
+
+1. Make sure you have bash completion.
+```bash
+$ ls /etc/ | grep --color bash_completion.d
+```
+2. Copy the script file into conpletion directory.
+```bash
+$ sudo cp hued.sh /etc/bash_completion.d/
+```
+3. Close the current shell and reopen it.
