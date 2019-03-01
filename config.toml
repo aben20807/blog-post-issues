@@ -2,7 +2,7 @@ baseURL = "https://aben20807.github.io/"
 languageCode = "zh-tw"
 title = "記錄用"
 
-theme = "story"
+theme = "hugOuO"
 DefaultContentLanguage = "zh"
 enableEmoji = true
 pygmentsCodeFences = true           # for code highlighting

@@ -1,9 +1,0 @@
-{{ $id := .Get "id" }}
-{{ if $id }}
-  <div class="gphoto-media">
-    <a href="https://drive.google.com/uc?export=view&id={{ $id }}" target="_blank">
-      <img src="https://drive.google.com/uc?export=view&id={{ $id }}"{{ with .Get "alt" }} alt="{{.}}"{{ end }}></img>
-    </a>
-    <center class="caption-text">{{ .Get "title" }}</center>
-  </div>
-{{ end }}
