@@ -16,6 +16,10 @@ disqusShortname = "forrecording"
 author = "Huang Po-Hsuan"
 classes = []
 
+[author]
+name = "Huang Po-Hsuan"
+email = "aben20807@gmail.com"
+
 # Navbar
 
 [menu]
