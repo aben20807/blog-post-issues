@@ -3,7 +3,7 @@ title = "First Met Hugo"
 date = "2019-03-21T22:20:12+08:00"
 url = "/posts/20190321-first-met-hugo"
 description = ""
-image = "https://d33wubrfki0l68.cloudfront.net/30790d6888bd8af863fb2b5c33a7f337cdbda243/4e867/images/hugo-logo-wide.svg"
+image = "https://drive.google.com/uc?export=view&id=1uRxzv04K2tSTBayXsGRSMKmK6CgstZ03"
 credit = "https://gohugo.io/"
 thumbnail = ""
 comments = true
@@ -37,23 +37,24 @@ $ sudo snap install hugo
 $ hugo version
 Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-01T13:33:06Z
 ```
+結果注意事項就把 Hugo 全部安裝完成了＠＠，部屬在 GitHub 就跟大部分用法相同。
 
 # 部落格架構配置
 
-因為 Hugo 會針對主題和文章經過 `hugo` 指令去產生一個完整的網站並預設放在 `public/` 資料夾。所以一般會把寫文章的地方跟網站分成兩個 repo，也就是把 `public/` push 到 `<username>.github.io`，寫文章的就創見另一個 `blog-post` 之類的 repo。這個作法可以使得網站不會被污染，也就是不會有奇怪的檔案，repo 也不會好像各種語言都有。
+因為 Hugo 會針對主題和文章經過 `hugo` 指令去產生一個完整的網站並預設放在 `public/` 資料夾。所以一般會把寫文章的地方跟網站分成兩個 repo，也就是把 `public/` push 到 `<username>.github.io`，寫文章的就創建另一個 `blog-post` 之類的 repo。這個作法可以使得網站不會被污染，也就是不會有奇怪的檔案，repo 也不會好像各種語言都有。
 
 但是，一般上面這種是會把主題的檔案都複製到你寫文章的 repo 裡這樣就可以自訂一些前端設計。
 
 我覺得這樣還不夠乾淨！因此我的方式是使用三個 repo：
 
-+ blog-post
-+ hugOuO
-+ aben20807.github.io
++ blog-post：存文章
++ hugOuO：主題
++ aben20807.github.io：發布網站
 
 沒錯，多一個 repo 追蹤主題，由於 Hugo 會自動的搜尋一些資料夾找尋網站設定，在一開始的資料夾找不到時，會根據 `config.toml` 中設定的主題去 `themes/` 找對應的主題，所以一開始的資料夾就不要有任何前端的檔案，除非像是 google analytics 需要放置規定的檔案，不然所有的前端設計 (架構, css, javascript) 都放在主題的 repo 中。當然這是給那些會修改別人主題的人的建議，如果是直接用現成的那就不需要多一個 repo 了。
 
 以下是一個簡單的檔案結構：
-```
+```bash
 blog-post/ <----------------------- repo 1: 存文章
 ├── config.toml
 ├── content
@@ -81,7 +82,7 @@ blog-post/ <----------------------- repo 1: 存文章
 └── public/ <---------------------- repo 3: 發布網站
 ```
 
-## 缺點
+## 這樣安排的缺點
 
 這麼多 repo 就是一個蠻大的缺點，不過若是非常在意的話可以利用 branch 來讓三個 repo 合併。  
 但是這個缺點有一個優點 (?)，就是可以刷 GitHub 的 contributions 啊！每次寫文章改一堆東西就會綠一片OuO
@@ -160,3 +161,7 @@ Google 的流量監測，Hugo 已經有寫好可以直接用，在 `config.toml`
 ## 9. hued
 
 因為每次編輯時都要用很長的路徑 `content/posts/xxxx.md`，頗煩躁，所以就寫了一個把指令包起來的 script，安裝方式可以看 [README](https://github.com/aben20807/blog-post#hued)，還有補全喔，雖然應該是只有 oh-my-bash 可用。
+
+## 10. Disqus 評論系統
+
+設定方式跟 google analytics 一樣簡單，簡單到我都忘了要設定....設定 short name 即可。
