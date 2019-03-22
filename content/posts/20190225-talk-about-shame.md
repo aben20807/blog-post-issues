@@ -3,7 +3,7 @@ title = 'Talk About Shame'
 date = "2019-02-25T21:40:00+08:00"
 url = "/posts/20190225-talk-about-shame"
 description = ""
-image = "https://drive.google.com/uc?export=view&id=1k9E513mSz4-OdvTjiLk3c2GzgFO7Gci-"
+image = "https://drive.google.com/uc?export=view&id=1oGP2AYSwCtfbqqAYbKGY-6mFXfqPWhlX"
 credit = "https://www.moedict.tw/%E7%A6%AE%E7%BE%A9%E5%BB%89%E6%81%A5"
 thumbnail = ""
 comments = true
