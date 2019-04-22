@@ -37,9 +37,9 @@ $ sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
 
 點 OK 後就會出現了，不需要重新登入或關機
 
-![google- ](https://drive.google.com/open?id=1dRR1G6VrP2oid0S9QBvTvXVMeFHzGF8r)
+![google-最下排左邊數來第二個](https://drive.google.com/open?id=1dRR1G6VrP2oid0S9QBvTvXVMeFHzGF8r)
 
-圖標示預設的，若需要要修改就編輯一下檔案，注意檔名是剛剛取的名稱加上 .desktop 的副檔名
+圖標是預設的，若需要要修改就編輯一下檔案，注意檔名是剛剛取的名稱加上 .desktop 的副檔名
 
 ```bash
 $ sudo vim /usr/share/applications/VisualVM.desktop
