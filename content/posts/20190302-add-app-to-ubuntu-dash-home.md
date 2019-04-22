@@ -19,6 +19,8 @@ draft = false
 
 測試系統：Ubuntu 18.04
 
+# 使用 gnome-desktop-item-edit
+
 首先安裝 `gnome-desktop-item-edit` 這個工具
 
 ```bash
@@ -45,10 +47,14 @@ $ sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
 $ sudo vim /usr/share/applications/VisualVM.desktop
 ```
 
-加上 icon 路徑
+# 加上 icon 路徑
 
 ![google- ](https://drive.google.com/open?id=1rAWhlWkLTVIJ8JhS_o-o-gZW1grBVbQU)
 
 儲存後就可以看到結果了
 
 ![google- ](https://drive.google.com/open?id=1P1k41x1OtC9bbsphoYVyNTBoA14xDTKf)
+
+# 參考
+
++ [Desktop Shortcut creation with gnome-desktop-item-edit](https://linuxconfig.org/how-to-create-desktop-shortcut-launcher-on-ubuntu-18-04-bionic-beaver-linux#h6-3-desktop-shortcut-creation-with-gnome-desktop-item-edit)
