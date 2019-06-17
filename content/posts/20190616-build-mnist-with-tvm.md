@@ -1,14 +1,14 @@
 +++
-title = "Build MINST with TVM"
+title = "Build MNIST with TVM"
 date = "2019-06-16T17:40:59+08:00"
-url = "/posts/20190616-build-minst-with-tvm"
+url = "/posts/20190616-build-mnist-with-tvm"
 description = ""
 image = "https://drive.google.com/uc?export=view&id=1qSdoAYPCxNk5tlI0ELivCieDWCQO9IOV"
 credit = ""
 thumbnail = ""
 comments = true
 categories = ["深度學習"]
-tags = ["dnn", "python", "tvm", "keras"]
+tags = ["dnn", "python", "tvm", "keras", "mnist"]
 toc = true
 draft = false
 +++
@@ -23,13 +23,23 @@ draft = false
 # 前言
 
 最近在做 TVM 相關的事，它支援頗多前端，基於方便我就隨便挑一個 Keras 了 (先說我不會 AI @@  
-然後因為現在頗多都在做 ImageNet 或更之後的應用，MINST 的資料反而偏少，尤其是幾乎找不到訓練好的模型，說幾乎是因為還真的被我找到，傳送門：[EN10/KerasMNIST](https://github.com/EN10/KerasMNIST)，如果只是要用 Keras 來操作 MINST 的話可以用這個連結，我已經確認過是可以直接執行XDD
+然後因為現在頗多都在做 ImageNet 或更之後的應用，MNIST 的資料反而偏少，尤其是幾乎找不到訓練好的模型，說幾乎是因為還真的被我找到，傳送門：[EN10/KerasMNIST](https://github.com/EN10/KerasMNIST)，如果只是要用 Keras 來操作 MNIST 的話可以用這個連結，我已經確認過是可以直接執行XDD
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-  
+2019.06.17 更新：扯，原來官網就有....https://keras.io/examples/mnist_cnn/  
+然後我發現我整篇都把 MNIST 打成 MINST....  
+~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-  
 
 話說原本以為模型被存成檔案的話只有權重，結果是有兩種，也可以跟整個模型存在一起，詳情就去 Keras 官網 [How can I save a Keras model?](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model) 看看吧。
 
-所以上面那個做 MINST 的是把整個模型存起來，這主要不是我要的＠＠，不過還是先用看看。
+所以上面那個做 MNIST 的是把整個模型存起來，這主要不是我要的＠＠，不過還是先用看看。
 
 P.S. 一些相依性檔案例如 Keras, Tensorflow, TVM 的安裝就不一一記錄囉 OuO
+
+# 環境
+
++ ubuntu 18.04
++ TVM 0.6.dev (6a4d71ff40915611bd42b62994992b879e6be610)
 
 # 一堆程式碼上菜囉
 
@@ -121,7 +131,7 @@ fn (%conv2d_1_input, %v_param_1: Tensor[(32, 1, 3, 3), float32], %v_param_2: Ten
 ```
 扯，竟然不行＠＠，而且完全不知道錯哪，找了一些資料說是 shape 錯了，我試了各種排列組合也都不行....
 
-## 只存 MINST 的權重
+## 只存 MNIST 的權重
 
 只好使用上面提到 Keras 官網 [How can I save a Keras model?](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model) 的方式只存權重出來，這裡我們只需要改最後一行，`save` 改成 `save_weights`
 
@@ -183,12 +193,12 @@ model.fit(x_train, y_train,
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-model.save_weights('minst_weights.h5')
+model.save_weights('mnist_weights.h5')
 ```
 跑了頗久，不過跟其應該比 ImageNet 快很多了。結果如下圖。
-![google-train a MINST model with Keras](https://drive.google.com/open?id=1qSdoAYPCxNk5tlI0ELivCieDWCQO9IOV)
+![google-train a MNIST model with Keras](https://drive.google.com/open?id=1qSdoAYPCxNk5tlI0ELivCieDWCQO9IOV)
 
-## 自己用 Keras 建構一個 MINST 再餵給 TVM
+## 自己用 Keras 建構一個 MNIST 再餵給 TVM
 
 把上面產生的權重餵給自己建構的模型
 
@@ -216,7 +226,7 @@ x = x.reshape(1,28,28,1)
 x = x.astype('float32')
 x /= 255
 
-# Construct a MINST model
+# Construct a MNIST model
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(28,28,1)))
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
@@ -228,7 +238,7 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
 # Load the weights that we get from last program
-model.load_weights('minst_weights.h5')
+model.load_weights('mnist_weights.h5')
 
 shape_dict = {'input_1': (1, 1, 28, 28)}
 func, params = relay.frontend.from_keras(model, shape_dict)
@@ -295,7 +305,7 @@ x = x.reshape(1,28,28,1)
 x = x.astype('float32')
 x /= 255
 
-# Construct a MINST model
+# Construct a MNIST model
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(28,28,1)))
 model.add(Conv2D(64, kernel_size=(3, 3), activation='relu'))
@@ -307,7 +317,7 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
 # Load the weights that we get from last program
-model.load_weights('minst_weights.h5')
+model.load_weights('mnist_weights.h5')
 
 # Perform the prediction
 out = model.predict(x)
@@ -348,7 +358,7 @@ x = x.astype('float32')
 x /= 255
 
 # model = load_model('cnn.h5')
-# Construct a MINST model
+# Construct a MNIST model
 model = Sequential()
 model.add(InputLayer(input_shape=input_shape))
 model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))
@@ -361,7 +371,7 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
 # Load the weights that we get from last program
-model.load_weights('minst_weights.h5')
+model.load_weights('mnist_weights.h5')
 
 shape_dict = {'input_1': (1, 1, 28, 28)}
 func, params = relay.frontend.from_keras(model, shape_dict)
@@ -376,7 +386,7 @@ tvm_out = executor.evaluate(func)(tvm.nd.array(x.astype(dtype)), **params)
 print(np.argmax(tvm_out.asnumpy()[0]))
 ```
 ```bash
-$ python3 test_minst.py
+$ python3 test_mnist.py
 3
 ```
 扯，竟然過了 QuQ
