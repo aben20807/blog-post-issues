@@ -21,6 +21,10 @@ toc = false
 維護網站的專案一樣是開源的喔，可以去翻翻有用的東西 OuO - [傳送門](https://github.com/aben20807/blog-post)  
 如果有什麼願望清單的話可以發個 [issue](https://github.com/aben20807/blog-post/issues) 喔 (雖然....QuQ)
 
+# 授權方式
+
+沒意外若沒註明參考資料的是自己寫的，可以遵守 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 修改或分享。
+
 # 聯絡方式
 
 + E-mail: aben20807[at]gmail.com
