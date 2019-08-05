@@ -32,5 +32,3 @@ toc = false
 + Blogger (舊網站): [記錄用](https://aben20807.blogspot.com/)
 
 # ???贊助
-
-<iframe src="https://button.like.co/in/embed/aben20807/button?referrer=https://aben20807.github.io/" width="80%" height="200" frameborder="0"></iframe>
