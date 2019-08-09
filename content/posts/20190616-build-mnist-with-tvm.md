@@ -25,10 +25,12 @@ draft = false
 最近在做 TVM 相關的事，它支援頗多前端，基於方便我就隨便挑一個 Keras 了 (先說我不會 AI @@  
 然後因為現在頗多都在做 ImageNet 或更之後的應用，MNIST 的資料反而偏少，尤其是幾乎找不到訓練好的模型，說幾乎是因為還真的被我找到，傳送門：[EN10/KerasMNIST](https://github.com/EN10/KerasMNIST)，如果只是要用 Keras 來操作 MNIST 的話可以用這個連結，我已經確認過是可以直接執行XDD
 
-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-  
+---
+
 2019.06.17 更新：扯，原來官網就有....https://keras.io/examples/mnist_cnn/  
 然後我發現我整篇都把 MNIST 打成 MINST....  
-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-  
+
+---
 
 話說原本以為模型被存成檔案的話只有權重，結果是有兩種，也可以跟整個模型存在一起，詳情就去 Keras 官網 [How can I save a Keras model?](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model) 看看吧。
 

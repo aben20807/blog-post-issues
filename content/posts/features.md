@@ -18,7 +18,7 @@ skip = true
 <!--more-->
 
 # 標題 (heading)
-```markdown
+```
 # h1
 ## h2
 ### h3
@@ -46,6 +46,24 @@ int main()
 }
 ```
 
+# 橫線
+
+```
+---
+```
+
+---
+
+# 引用
+
+```
+> The more I learn, the more I realize how much I don't know.  
+> --- Albert Einstein
+```
+
+> The more I learn, the more I realize how much I don't know.  
+> --- Albert Einstein
+
 # 插入圖片
 
 目前並不打算直接上傳到 github，所以找了一些方式  
@@ -63,4 +81,13 @@ int main()
 ```
 ![google-title here](https://drive.google.com/open?id=1LipAb-4seXENzvyjSYbgtCqEQUfzGziC)
 
+# YouTube
+<pre><code>
+{{&lt; youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg" &gt;}}
+</code></pre>
+{{< youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg" >}}
 
+<pre><code>
+{{&lt; youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500" &gt;}}
+</code></pre>
+{{< youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500" >}}
