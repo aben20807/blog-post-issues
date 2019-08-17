@@ -40,6 +40,7 @@ hued () {
     fi
     if [[ -n $@ ]]; then
         vim "$@"
+        echo "< vim" $@ " >"
     fi
 }
 

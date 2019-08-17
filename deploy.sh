@@ -4,6 +4,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 commithash="`git rev-parse HEAD`"
 commitlink="`git remote show origin -n | grep h.URL | sed 's/.*://;s/.git$//'`@$commithash"
+hugoversion="`hugo version`"
 
 # Move old files into trash.
 echo -e "\033[0;32mMove old files into trash...\033[0m"
@@ -25,6 +26,7 @@ git add .
 msg="
 Rebuilding site `date '+%Y-%m-%d %H:%M:%S'`
 
+by $hugoversion
 link to the commit: $commitlink
 "
 

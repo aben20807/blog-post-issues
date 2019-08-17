@@ -33,7 +33,7 @@ You can submit the issue [here](https://github.com/aben20807/blog-post/issues).
 ```bash
 $ ls /etc/ | grep --color bash_completion.d
 ```
-2. Copy the script file into conpletion directory.
+2. Copy the script file into conpletion directory. (Update)
 ```bash
 $ sudo cp hued.sh /etc/bash_completion.d/
 ```
