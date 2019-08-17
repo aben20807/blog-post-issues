@@ -8,9 +8,9 @@ credit = ""
 thumbnail = ""
 comments = true
 categories = ["軟體工具"]
-tags = ["valgrind", "profiling"]
+tags = ["valgrind", "profiling", "C"]
 toc = true
-draft = true
+draft = false
 +++
 <!-- https://drive.google.com/uc?export=view&id=1_AbE-ZZwgjrCTgCi9ypGCVyYqWvxDO6f -->
 
