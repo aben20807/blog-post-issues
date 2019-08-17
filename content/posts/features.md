@@ -24,6 +24,8 @@ skip = true
 ### h3
 #### h4 支援 emoji :smile:
 ##### h5 支援中文~
+###### h6 
+####### h7 最多只有到 6 級
 ```
 
 # h1
@@ -31,6 +33,8 @@ skip = true
 ### h3
 #### h4 支援 emoji :smile:
 ##### h5 支援中文~
+###### h6
+####### h7 最多只有到 6 級
 
 右邊會有浮動 TOC (table of contents)，可點擊！  
 只會顯示 h1 ~ h3 過長會變成 ...
@@ -46,6 +50,24 @@ int main()
 }
 ```
 
+# 強調字型
+
+可參考：https://www.markdownguide.org/basic-syntax/#emphasis
+
+```
+__粗體__  
+**粗體**  
+_斜體_  
+*斜體*  
+__*粗斜體*__
+```
+
+__粗體__  
+**粗體**  
+_斜體_  
+*斜體*  
+__*粗斜體*__
+
 # 橫線
 
 ```
@@ -53,6 +75,23 @@ int main()
 ```
 
 ---
+
+# 項目 (Bullet)
+```
++ a
+  + 1
+  + 2
++ b
+  1. OuO
+  2. QuQ
+```
+
++ a
+  + 1
+  + 2
++ b
+  1. OuO
+  2. QuQ
 
 # 引用
 
@@ -82,12 +121,12 @@ int main()
 ![google-title here](https://drive.google.com/open?id=1LipAb-4seXENzvyjSYbgtCqEQUfzGziC)
 
 # YouTube
-<pre><code>
-{{&lt; youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg" &gt;}}
-</code></pre>
+<pre>
+{{&lt; youtube &quot;<span>https://www.youtube.com/watch?v=jC3jnC1dsAg</span>&quot; &gt;}}
+</pre>
 {{< youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg" >}}
 
-<pre><code>
-{{&lt; youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500" &gt;}}
-</code></pre>
+<pre>
+{{&lt; youtube &quot;<span>https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500</span>&quot; &gt;}}
+</pre>
 {{< youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500" >}}
