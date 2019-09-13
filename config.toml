@@ -9,6 +9,7 @@ pygmentsCodeFences = true           # for code highlighting
 enableInlineShortcodes = true
 googleAnalytics = "UA-123296010-2"
 disqusShortname = "forrecording"
+enableGitInfo = true                # for last modified
 
 # Footer
 
