@@ -3,8 +3,8 @@ title = "天氣之子 Weathering With You"
 date = "2019-09-19T23:35:06+08:00"
 url = "/posts/20190919-weathering-with-you"
 description = ""
-image = ""
-credit = ""
+image = "https://drive.google.com/uc?export=view&id=1e-W33G5mxkcyW8UggrgalOOMiN0rCVHG"
+credit = "https://twitter.com/tenkinoko_movie"
 thumbnail = ""
 comments = true
 categories = ["電影"]
@@ -12,7 +12,7 @@ tags = ["動畫", "新海誠"]
 toc = false
 draft = false
 +++
-<!-- https://drive.google.com/uc?export=view&id= -->
+<!-- https://drive.google.com/uc?export=view&id=1e-W33G5mxkcyW8UggrgalOOMiN0rCVHG -->
 
 看完直接來寫一波 OuO  
 趁還沒看其他人的影評先來說一下看完當下的一些感想  
@@ -33,6 +33,8 @@ draft = false
 所以我這幾天有點膽顫心驚，深怕一不小心就被暴雷了，我甚至連已經在 YouTube 出現的音樂都沒聽過，看到相關新聞快速掠過。
 
 雖然我總是口頭說著喜歡下雨，但是再好幾次的雨天也都會覺得很麻煩，這次能夠用天氣當作動畫題材我真心佩服。
+
+![google- ](https://drive.google.com/open?id=1e-W33G5mxkcyW8UggrgalOOMiN0rCVHG)
 
 首先第一個果然，從 2002年《星之聲》, 2004年《雲之彼端，約定的地方》, 2007年 《秒速5公分》, 2011年《追逐繁星的孩子》, 2013年《言葉之庭》全部都有一種會使人心痛的寂寞感，但想當然爾大家喜歡的是像迪士尼那樣友好結局的作品，2016年《你的名字》就出現了，直接讓新海誠導演成為討論的焦點，而成功關鍵就是有好的結局，就如同細田守2009年《夏日大作戰》一樣是大家喜愛的電影。但是誠哥舊時的那種寂寞感已經不復存在，較不失理的講法就是稱那些新的影片為商業導向即為商業片。
 
