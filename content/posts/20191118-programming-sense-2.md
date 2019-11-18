@@ -74,7 +74,7 @@ int main() {
 
 以下題目來自 108-1 成大資工 資料結構作業三 (這裡放上題目，不過我不打算解它，雖然這樣會比較完整，可是我真的沒空 QuQ)
 
-<iframe src="https://drive.google.com/file/d/1N7S4ynPmXpMYVZVgJdL0_h0K_IYXCwUl/preview" width="720" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1N7S4ynPmXpMYVZVgJdL0_h0K_IYXCwUl/preview" width="100%" height="340px"></iframe>
 
 ### 是否能簡化
 
