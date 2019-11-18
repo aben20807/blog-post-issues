@@ -283,7 +283,7 @@ C 語言給予使用者相當大的彈性但用起來需要知道自己在做什
 + 盡量不使用全域變數
 
 
-[{{ 下一篇傳送門：Programming Sense (2)  }}]({{< ref "/posts/20191118-programming-sense-2" >}})
+[{{ 下一篇傳送門：Programming Sense (2) }}]({{< ref "/posts/20191118-programming-sense-2" >}})
 
 
 # 參考
