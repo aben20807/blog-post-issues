@@ -106,7 +106,7 @@ void set_group_id(
 ## 小步前進，持續驗證
 
 > 寫大程式要像西敏寺那樣的大教堂一樣，先從一個功能完整的小教堂開始，然後把小部分拆掉蓋個更大更豪華的；如果一次就想蓋個超大的教堂，最後可能弄成一團廢墟，連禮拜的功能都沒有。  
-> --- Yoda 生活筆記 (Lee You Tang) [1]
+> --- Yoda 生活筆記 (Lee You Tang) [^1]
 
 等萬事俱備只欠打扣時我們就可以開始寫程式囉，最有效率的流程就是小步前進逐步驗證，不要一次就把程式打完，這樣執行發現跟結果不一樣時，問題就會非常難找，是輸入錯誤還是中間的邏輯錯誤或是輸出錯誤，若沒有逐步驗證的話，哪個階段出問題真的很難定位。
 
@@ -124,7 +124,7 @@ enque 跟 deque 一樣分開驗證，這時候我們需要加上一些輔助的�
 
 ## 設計測資
 
-題目給的測資一定很少，但是實際會遇到的情況相當多，所以一定要多設計幾組測試資料，可以利用上一篇提到的重新導向 (Redirection) 的方式才不用每次都要重新手打，照理說可以再加上 Makefile 來幫忙，可以參考我的另外一篇 [4]。
+題目給的測資一定很少，但是實際會遇到的情況相當多，所以一定要多設計幾組測試資料，可以利用上一篇提到的重新導向 (Redirection) 的方式才不用每次都要重新手打，照理說可以再加上 Makefile 來幫忙，可以參考我的另外一篇 [^4]。
 
 ## 註解大法
 
@@ -132,7 +132,7 @@ enque 跟 deque 一樣分開驗證，這時候我們需要加上一些輔助的�
 
 ## `printf` 好夥伴
 
-`printf()` 是一個相當神奇且好用的函式，其底層非常複雜歡迎有興趣的人可以參考 [2]。我的習慣是在實作不同資料結構時都會做一個對應的函式來印出其內容以方便驗證。
+`printf()` 是一個相當神奇且好用的函式，其底層非常複雜歡迎有興趣的人可以參考 [^2]。我的習慣是在實作不同資料結構時都會做一個對應的函式來印出其內容以方便驗證。
 
 ```c
 void print_queue(struct Queue const * const q) {
@@ -145,15 +145,13 @@ void print_queue(struct Queue const * const q) {
 
 ## GDB
 
-GDB ([The GNU Project Debugger](https://www.gnu.org/software/gdb/)) 是 segmentation fault 發生時的好夥伴，它可以幫助你找出程式是在哪裡發生錯誤，這樣就可以去找出對應的解決方法。關於原生的 GDB 有點樸素這點我之前有寫過一篇介紹 [GDB dashboard](https://github.com/cyrus-and/gdb-dashboard) 可以參考 [3]。
+GDB ([The GNU Project Debugger](https://www.gnu.org/software/gdb/)) 是 segmentation fault 發生時的好夥伴，它可以幫助你找出程式是在哪裡發生錯誤，這樣就可以去找出對應的解決方法。關於原生的 GDB 有點樸素這點我之前有寫過一篇介紹 [GDB dashboard](https://github.com/cyrus-and/gdb-dashboard) 可以參考 [^3]。
 
 # 後記
 
 突然發現自己好像也不是這麼悠閒，不過還是把這些趕出來了，可能會有錯 (範例打錯或錯字) 再請大家幫忙抓漏 了，感恩 QuQ。很多部份也都沒有附上範例，這可能之後有需要的話可以補上。歡迎討論也歡迎在我有空的時候找我幫忙 review 程式碼，這對我來說也是一種成長的來源吧。身邊如果有人願意幫你 review 的話請盡量把握，也在此感謝曾經幫我看過程式碼的貴人們。
 
-# 參考
-
-+ [1]: [把一顆樹寫出來是會有多難](https://yodalee.blogspot.com/2019/11/rust-visitor.html)
-+ [2]: [Tearing apart printf()](https://www.maizure.org/projects/printf/index.html?fbclid=IwAR2fPTM7CxfIWD7pC_crmp-UFDPG2RZ7BH-62e-TCjPmxhzwLyT_D7oEYak)
-+ [3]: [107.06.18 好看的 gdb, gdb-dashboard](https://aben20807.blogspot.com/2018/06/1070618-gdb-gdb-dashboard.html)
-+ [4]: [Makefile for Testing](https://aben20807.github.io/posts/20190216-makefile-for-testing/)
+[^1]: [把一顆樹寫出來是會有多難](https://yodalee.blogspot.com/2019/11/rust-visitor.html)
+[^2]: [Tearing apart printf()](https://www.maizure.org/projects/printf/index.html?fbclid=IwAR2fPTM7CxfIWD7pC_crmp-UFDPG2RZ7BH-62e-TCjPmxhzwLyT_D7oEYak)
+[^3]: [107.06.18 好看的 gdb, gdb-dashboard](https://aben20807.blogspot.com/2018/06/1070618-gdb-gdb-dashboard.html)
+[^4]: [Makefile for Testing](https://aben20807.github.io/posts/20190216-makefile-for-testing/)
