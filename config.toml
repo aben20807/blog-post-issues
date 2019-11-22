@@ -10,6 +10,8 @@ enableInlineShortcodes = true
 googleAnalytics = "UA-123296010-2"
 disqusShortname = "forrecording"
 enableGitInfo = true                # for last modified
+footnoteAnchorPrefix = "ouo:"
+footnoteReturnLinkContents = "<sup>[↩]</sup>"
 
 # Footer
 

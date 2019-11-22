@@ -39,7 +39,7 @@ draft = false
 
 「工欲善其事，必先利其器」《論語·衛靈公》 善用工具真的頗為重要，使用得當可以大量減少重複性的動作，如果是寫一般的小程式的話我會建議可以玩看看 [VIM](https://en.wikipedia.org/wiki/Vim_(text_editor)) 設定可以參考[我的設定](https://github.com/aben20807/aben20807.vim)或直接問我，可以大量減少手部的負擔。大型一點的我會推薦 [VSCode](https://code.visualstudio.com/)，因為內容會偏多所以我就用一個副標題來說明了。
 
-![google-vi... [7]](https://drive.google.com/open?id=1kYWGLrrnkeQaVo2OwbMZQddDu6iIn-do)
+![google-vi... ](https://drive.google.com/open?id=1kYWGLrrnkeQaVo2OwbMZQddDu6iIn-do) [^7]
 
 ## VSCode
 
@@ -83,7 +83,7 @@ $ ./queue < input.txt > output.txt
 
 這裡涵蓋的範圍包括了縮排、空格、括號、命名。
 
-![google-pythonize [8]... 別亂學 XDD](https://drive.google.com/open?id=1srj3r8VaQ4_csG69Lr3vQD_ENvjEXmJH)
+![google-pythonize ... 別亂學 XDD](https://drive.google.com/open?id=1srj3r8VaQ4_csG69Lr3vQD_ENvjEXmJH) [^8]
 
 ## Google Coding Style
 
@@ -108,7 +108,7 @@ $ ./queue < input.txt > output.txt
 
 ### 縮排 (Indent)
 
-我以前偏好 4 個空格，但是最近有往兩個空格移動的趨勢，另外 Google 也是以 2 個空格為主。然而 Linux kernel 是使用 tab，這裡其實只要跟合作的夥伴們講好統一使用一種即可，就不提有統計指出用 space 賺的錢比用 tab 的人多了 [5]。
+我以前偏好 4 個空格，但是最近有往兩個空格移動的趨勢，另外 Google 也是以 2 個空格為主。然而 Linux kernel 是使用 tab，這裡其實只要跟合作的夥伴們講好統一使用一種即可，就不提有統計指出用 space 賺的錢比用 tab 的人多了 [^5]。
 
 ### If Statement
 
@@ -137,7 +137,7 @@ if (condition) {
 #### 加上空格們
 
 注意 `;` 前不要後要。  
-這裡用 `i++` 或 `++i` 其實基本上沒有效能差異 [1]，編譯器會幫你最佳化，我更喜歡 `i++` 因為要改成 `i+=2` 之類的比較方便，另外也是有 `i-=-1` [2] 這種邪教...
+這裡用 `i++` 或 `++i` 其實基本上沒有效能差異 [^1]，編譯器會幫你最佳化，我更喜歡 `i++` 因為要改成 `i+=2` 之類的比較方便，另外也是有 `i-=-1` [^2] 這種邪教...
 
 ```c
 for (int i = 0; i < some_number; i++) {
@@ -147,7 +147,7 @@ for (int i = 0; i < some_number; i++) {
 
 ### Pointer 變數宣告
 
-`int*x;`、`int *x;`、`int* x`、`int * x` 都是可編譯的寫法，在 C 中 `int *x;` 更為常用。C++ 中反而是 `int* x;` [3]。
+`int*x;`、`int *x;`、`int* x`、`int * x` 都是可編譯的寫法，在 C 中 `int *x;` 更為常用。C++ 中反而是 `int* x;` [^3]。
 
 ### 命名 (Naming Convention)
 
@@ -171,7 +171,7 @@ e.g., `MAX_ROW_SIZE`
 
 ## 初始化 (Initialize)
 
-寫 C 語言時要注意變數的初始化，以免結果跟自己所想的不一樣，這是因為在規格書中的定義中提到，只有全域變數或是靜態 (static) 變數會被初始化，其他未初始化的則不會有明確的初始值。 C99 §6.7.8.10 [4]。在陣列的初始化若要全部定義為 `\0`，我們可以直接在宣告中使用 `{}` 即可，因為規格書中有規定若初始化的個數不足則會比照靜態變數 C99 §6.7.8.21 [4]:  
+寫 C 語言時要注意變數的初始化，以免結果跟自己所想的不一樣，這是因為在規格書中的定義中提到，只有全域變數或是靜態 (static) 變數會被初始化，其他未初始化的則不會有明確的初始值。 C99 §6.7.8.10 [^4]。在陣列的初始化若要全部定義為 `\0`，我們可以直接在宣告中使用 `{}` 即可，因為規格書中有規定若初始化的個數不足則會比照靜態變數 C99 §6.7.8.21 [^4]:  
 
 ```c
 // 每個變數宣告時搭配初始化
@@ -184,7 +184,7 @@ char que[26] = {};
 
 ## 註解 (Comment)
 
-請盡量使用英文來註解，因為英文比較不像中文那樣一詞多義，可以較明確的敘述，若執意要用中文就需要注意編碼，目前主流應該是使用 UTF8。內容部份可以多記錄一點上下文而不是僅僅該行程式碼做了什麼事，通常註解會拿來說明整個函式，會需要一行一行註解的情況比較少並會用高可讀性的程式馬來替代。我之前有找到一篇非常詳盡的指南 [6] 可以參考看看 (雖然我也沒有仔細讀完就是了＠＠
+請盡量使用英文來註解，因為英文比較不像中文那樣一詞多義，可以較明確的敘述，若執意要用中文就需要注意編碼，目前主流應該是使用 UTF8。內容部份可以多記錄一點上下文而不是僅僅該行程式碼做了什麼事，通常註解會拿來說明整個函式，會需要一行一行註解的情況比較少並會用高可讀性的程式馬來替代。我之前有找到一篇非常詳盡的指南 [^6] 可以參考看看 (雖然我也沒有仔細讀完就是了＠＠
 
 寫法上注意空格即可。
 
@@ -193,13 +193,13 @@ char que[26] = {};
 /* OuO */
 ```
 
-## 副作用 (Side Effect)
+## 副:作用 (Side Effect)
 
 副作用 ([Side Effect](https://en.wikibooks.org/wiki/C_Programming/Side_effects_and_sequence_points)) 聽起來好像很不妙，簡單來說就是會在函式內部修改到參數的情況。其實這在一般程式語言中頗為常見，沒有這項功能的話程式會變得相當難寫，例如 Functional language 寫起來就頗耗費腦力。
 
 ### 在函式宣告時點出副作用
 
-但是在開發過程需要適時隔離變化，C 語言提供了 `const` 修飾字來標示該參數在函式中不會被修改。以下範例中的 `rear` 和 `orig`  不會被修改到內容，所以可以利用 `const` 來提醒函式呼叫者該參數不會被改動，反之 `front` 就有機會被改動。詳細的排列組合可以參考 [9]。
+但是在開發過程需要適時隔離變化，C 語言提供了 `const` 修飾字來標示該參數在函式中不會被修改。以下範例中的 `rear` 和 `orig`  不會被修改到內容，所以可以利用 `const` 來提醒函式呼叫者該參數不會被改動，反之 `front` 就有機會被改動。詳細的排列組合可以參考 [^9]。
 
 ```c
 void deque(char *orig, int *front, int *rear) {
@@ -224,7 +224,7 @@ void deque(
 
 ### 需要修改的才傳入其指標 (Pointer)
 
-這裡要先宣導一個觀念就是 C 語言只有 Pass By Value，也就是只會複製傳入變數的數值，傳入指標也是一樣，我們只是傳入了指標這個數值，而透過這個指標的取值 (dereference) 可以改動對應的記憶體位置 C99 §6.5.2.2.4 [4]。而因為 C 的函式回傳值只限一個，所以大部分會使用修改參數的方式來回傳數值，而真正的回傳值就用來表示函式是否正確執行，否則就回傳對應的錯誤碼。
+這裡要先宣導一個觀念就是 C 語言只有 Pass By Value，也就是只會複製傳入變數的數值，傳入指標也是一樣，我們只是傳入了指標這個數值，而透過這個指標的取值 (dereference) 可以改動對應的記憶體位置 C99 §6.5.2.2.4 [^4]。而因為 C 的函式回傳值只限一個，所以大部分會使用修改參數的方式來回傳數值，而真正的回傳值就用來表示函式是否正確執行，否則就回傳對應的錯誤碼。
 
 上面那樣改起來好像太奇葩，更好的解決方式是要先思考，把將要在函式內部更動變數在傳入其指標，其餘的只須把數值傳進去即可。當然若是傳入陣列就還是需要指標就像 `orig`。
 
@@ -271,12 +271,12 @@ static void my_local_function() {
 
 ## 避免使用危險的函式們
 
-C 語言給予使用者相當大的彈性但用起來需要知道自己在做什麼，否則會有許多安全性漏洞，有一些函式很容易造成誤用，連資深工程師也常用錯，因此蠻多專案直接把不安全的函式禁用，例如 Git [12]，Intel 的 safestringlib 也有一個完整列表 [13]。以下給出一些較常見的。
+C 語言給予使用者相當大的彈性但用起來需要知道自己在做什麼，否則會有許多安全性漏洞，有一些函式很容易造成誤用，連資深工程師也常用錯，因此蠻多專案直接把不安全的函式禁用，例如 Git [^12]，Intel 的 safestringlib 也有一個完整列表 [^13]。以下給出一些較常見的。
 
-+ `gets()` [10] C11 已經不支援，請改用 `fgets()`
++ `gets()` [^10] C11 已經不支援，請改用 `fgets()`
 + `strcpy()` 沒有長度偵測。
-+ `strncpy()` 有長度但是不會在結尾補上 `\0` [11]。
-+ `ato*()` 改用 `strto*()` 利於錯誤處理 C99 §7.20.1 [4]。
++ `strncpy()` 有長度但是不會在結尾補上 `\0` [^11]。
++ `ato*()` 改用 `strto*()` 利於錯誤處理 C99 §7.20.1 [^4]。
 
 ## 其他習慣
 
@@ -286,17 +286,16 @@ C 語言給予使用者相當大的彈性但用起來需要知道自己在做什
 [{{ 下一篇傳送門：Programming Sense (2) }}]({{< ref "/posts/20191118-programming-sense-2" >}})
 
 
-# 參考
-+ [1]: [Is there a performance difference between i++ and ++i in C?](https://stackoverflow.com/a/24887/6734174)
-+ [2]: [`i-=-1` is hipster, expressive and symmetric](https://twitter.com/DasSurma/status/1192736235447619584)
-+ [3]: [Is `int* p;` right or is `int *p;` right?](http://www.stroustrup.com/bs_faq2.html#whitespace)
-+ [4]: [C99 規格書 ISO/IEC 9899:TC3](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf)
-+ [5]: [Developers Who Use Spaces Make More Money Than Those Who Use Tabs](https://stackoverflow.blog/2017/06/15/developers-use-spaces-make-money-use-tabs/)
-+ [6]: [Writing system software: code comments.](http://antirez.com/news/124)
-+ [7]: [Tim Pope: when people ask me to recommend a text editor](https://twitter.com/tpope/status/1172743697315835904)
-+ [8]: [A Python programmer attempting Java](https://www.reddit.com/r/ProgrammerHumor/comments/2wrxyt/a_python_programmer_attempting_java/)
-+ [9]: [What is the difference between const int*, const int * const, and int const *?](https://stackoverflow.com/a/1143272)
-+ [10]: [CWE-242: Use of Inherently Dangerous Function](https://cwe.mitre.org/data/definitions/242.html)
-+ [11]: [How can code that tries to prevent a buffer overflow end up causing one?](https://devblogs.microsoft.com/oldnewthing/?p=36773)
-+ [12]: [git/banned.h](https://github.com/git/git/blob/master/banned.h)
-+ [13]: [SDL List of Banned Functions](https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions)
+[^1]: [Is there a performance difference between i++ and ++i in C?](https://stackoverflow.com/a/24887/6734174)
+[^2]: [`i-=-1` is hipster, expressive and symmetric](https://twitter.com/DasSurma/status/1192736235447619584)
+[^3]: [Is `int* p;` right or is `int *p;` right?](http://www.stroustrup.com/bs_faq2.html#whitespace)
+[^4]: [C99 規格書 ISO/IEC 9899:TC3](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf)
+[^5]: [Developers Who Use Spaces Make More Money Than Those Who Use Tabs](https://stackoverflow.blog/2017/06/15/developers-use-spaces-make-money-use-tabs/)
+[^6]: [Writing system software: code comments.](http://antirez.com/news/124)
+[^7]: [Tim Pope: when people ask me to recommend a text editor](https://twitter.com/tpope/status/1172743697315835904)
+[^8]: [A Python programmer attempting Java](https://www.reddit.com/r/ProgrammerHumor/comments/2wrxyt/a_python_programmer_attempting_java/)
+[^9]: [What is the difference between const int*, const int * const, and int const *?](https://stackoverflow.com/a/1143272)
+[^10]: [CWE-242: Use of Inherently Dangerous Function](https://cwe.mitre.org/data/definitions/242.html)
+[^11]: [How can code that tries to prevent a buffer overflow end up causing one?](https://devblogs.microsoft.com/oldnewthing/?p=36773)
+[^12]: [git/banned.h](https://github.com/git/git/blob/master/banned.h)
+[^13]: [SDL List of Banned Functions](https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions)
