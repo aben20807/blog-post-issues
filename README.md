@@ -1,6 +1,6 @@
 # Blog Post
 
-This repo is used for maintenance of [https://aben20807.github.io/](https://aben20807.github.io/)
+This repo is used for maintenance of [https://aben20807.github.io/](https://aben20807.github.io/). The repo of the static website can be accessed at [here](https://github.com/aben20807/aben20807.github.io).
 
 # Theme
 
