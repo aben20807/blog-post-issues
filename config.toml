@@ -13,6 +13,11 @@ enableGitInfo = true                # for last modified
 footnoteAnchorPrefix = "ouo:"
 footnoteReturnLinkContents = "<sup>[↩]</sup>"
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
 # Footer
 
 [params]
