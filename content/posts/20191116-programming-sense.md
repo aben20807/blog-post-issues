@@ -193,7 +193,7 @@ char que[26] = {};
 /* OuO */
 ```
 
-## 副:作用 (Side Effect)
+## 副作用 (Side Effect)
 
 副作用 ([Side Effect](https://en.wikibooks.org/wiki/C_Programming/Side_effects_and_sequence_points)) 聽起來好像很不妙，簡單來說就是會在函式內部修改到參數的情況。其實這在一般程式語言中頗為常見，沒有這項功能的話程式會變得相當難寫，例如 Functional language 寫起來就頗耗費腦力。
 
