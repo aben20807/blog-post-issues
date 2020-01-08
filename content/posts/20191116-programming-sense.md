@@ -96,7 +96,7 @@ $ ./queue < input.txt > output.txt
 # 習慣養成
 
 > 傻瓜都可以寫出機器能讀懂的代碼，但只有專業程序員才能寫出人能讀懂的代碼。  
-> --- 系統程序員成長計劃
+> --- 李先靜 《系統程序員成長計劃》[^傻瓜]
 
 ## Coding Style Again
 
@@ -294,8 +294,9 @@ C 語言給予使用者相當大的彈性但用起來需要知道自己在做什
 [^6]: [Writing system software: code comments.](http://antirez.com/news/124)
 [^7]: [Tim Pope: when people ask me to recommend a text editor](https://twitter.com/tpope/status/1172743697315835904)
 [^8]: [A Python programmer attempting Java](https://www.reddit.com/r/ProgrammerHumor/comments/2wrxyt/a_python_programmer_attempting_java/)
-[^9]: [What is the difference between const int*, const int * const, and int const *?](https://stackoverflow.com/a/1143272)
+[^9]: [What is the difference between const int\*, const int \* const, and int const \*?](https://stackoverflow.com/a/1143272)
 [^10]: [CWE-242: Use of Inherently Dangerous Function](https://cwe.mitre.org/data/definitions/242.html)
 [^11]: [How can code that tries to prevent a buffer overflow end up causing one?](https://devblogs.microsoft.com/oldnewthing/?p=36773)
 [^12]: [git/banned.h](https://github.com/git/git/blob/master/banned.h)
 [^13]: [SDL List of Banned Functions](https://github.com/intel/safestringlib/wiki/SDL-List-of-Banned-Functions)
+[^傻瓜]: [系統程序員成長計劃-走近專業程序員(下)](https://blog.csdn.net/absurd/article/details/3181222)
