@@ -117,3 +117,7 @@ int main () {
 可以從結果看到後者可讀性較高
 
 ![封面照片 - 執行結果](https://lh3.googleusercontent.com/pw/ACtC-3cFVFsP6QcLV2K8_d7pOf3SfR4bWEjy5oM8KqVHXHST8h7ysiSwCAJd4-oZOfWB_v54ekhXZ5OSM36lAtLS0EhN-YoDXIkuRVkDPU6sH41P5jrtNhPYsvgnIeg55ZGXouiUQe-vblaoFGLo40Y315J0=w1708-h1112-no)
+
+# References
++ [C++ Get name of type in template](https://stackoverflow.com/a/19123821)
++ [Unmangling the result of std::type_info::name](https://stackoverflow.com/a/4541470)
