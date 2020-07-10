@@ -16,6 +16,11 @@ $ git clone git@github.com:aben20807/aben20807.github.io.git
 $ mv aben20807.github.io/ public/
 ```
 
+# Build site
+
++ Install hugo: `$ sudo snap install hugo`
++ Build on localhost: `$ hugo server -D --disableFastRender`
+
 # Wishlist
 
 You can submit the issue [here](https://github.com/aben20807/blog-post/issues).
@@ -25,7 +30,7 @@ You can submit the issue [here](https://github.com/aben20807/blog-post/issues).
 ## hued
 
 + An editor make you edit the post file easily with completion that skip the middle directories.
-+ Notice: some parts are hardcode. the directory is "content/posts/"
++ Notice: some parts are hardcode, for example, the directory is "content/posts/"
 
 ### Install
 
