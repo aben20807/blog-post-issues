@@ -42,6 +42,7 @@ draft = false
 + 統計圖表功能完整
 
 可能缺點：
++ 一定要有網路才能記帳
 + 複雜統計功能要花時間設計
 + 某些表單沒有的可能就無法提供，例如，顯示表格，另外我發現手機無法上傳圖片 QuQ
 
@@ -65,7 +66,7 @@ draft = false
 
 ## 如何使用表單
 
-一開始想法很簡單，就是建立記錄用的表單，然後將連結用書簽的型式存在手機桌面，這樣就可以直接點來記帳。
+一開始想法很簡單，就是建立記錄用的表單，然後將連結用書籤的型式存在手機桌面，這樣就可以直接點來記帳。
 
 ![ ](https://lh3.googleusercontent.com/pw/ACtC-3dBfRoc4yz-m2ciB1uy1WiY5NUFUdHZZ7Us8HWtZPVZviemG2keYD56E0Ujo-00380KveIxeQcQ2l5AqRjHYrVejcxQESoC6lR43QtZGwsSKjyX-m_0rdqzzg8hE0Y9NEUjzPRe7L4t3R4J5TTtrmwQ=w1272-h836-no)
 ![出現在桌面](https://lh3.googleusercontent.com/pw/ACtC-3frXOytq3We7pyNsglA69vKcVR3mFoV0nQbihbk8mqR5ebdj-gxlvXPhxQ7oNByjdtlwTQ9Szj1TTxC4mWJ0ty7SLGr5LpJIJKMmpWzBGlyHuK-26TGR8A2rgkBn4nUv_ODDaC1FUCxQDjO51t8dUrE=w1272-h903-no)
@@ -124,7 +125,7 @@ Android Studio 過於肥大是不得已才會採用。查了一下發現 App Inv
 
 # 成品
 
-感覺我也不算是做一個記帳 App，反而像是將書籤或是網址合併變成一個 App，所以我就取這個名子找這個 icon。我也增加設定頁面可以設定的東西，包括按鈕的文字也可以換，所以也就不限於記帳了。
+感覺我也不算是做一個記帳 App，反而像是將書籤或是網址合併變成一個 App，所我雖然取這個名子不過我還是找一個沒有跟錢相關的 icon。我也增加設定頁面可以設定的東西，包括按鈕的文字也可以換，所以也就不限於記帳了。
 
 Icons made by [Smashicons](https://smashicons.com/) from [www.flaticon.com](https://www.flaticon.com/)
 
