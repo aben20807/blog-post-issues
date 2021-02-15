@@ -7,14 +7,14 @@ commitlink="`git remote show origin -n | grep h.URL | sed 's/.*://;s/.git$//'`@$
 hugoversion="`hugo version`"
 
 # Move old files into trash.
-echo -e "\033[0;32mMove old files into trash...\033[0m"
-tmpdir="blog-post@$commithash"
-mkdir "$tmpdir"
-find ./public -maxdepth 1 -mindepth 1 -not -name ".git" -not -name ".gitignore" -print0 | xargs -0 mv -t "$tmpdir"
-gio trash "$tmpdir"
+# echo -e "\033[0;32mMove old files into trash...\033[0m"
+# tmpdir="blog-post@$commithash"
+# mkdir "$tmpdir"
+# find ./public -maxdepth 1 -mindepth 1 -not -name ".git" -not -name ".gitignore" -print0 | xargs -0 mv -t "$tmpdir"
+# gio trash "$tmpdir"
 
 # Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo --gc --minify --cleanDestinationDir # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
