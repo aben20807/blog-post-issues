@@ -12,14 +12,17 @@ I have to thank them for providing good themes and giving those MIT license so t
 ```bash
 $ git clone --recursive git@github.com:aben20807/blog-post.git
 $ cd blog-post
-$ git clone git@github.com:aben20807/aben20807.github.io.git 
-$ mv aben20807.github.io/ public/
+$ git clone git@github.com:aben20807/aben20807.github.io.git public
 ```
 
-# Build site
+# Build site locally
 
 + Install hugo: `$ sudo snap install hugo`
 + Build on localhost: `$ hugo server -D --disableFastRender`
+
+# Deploy
+
++ `./deploy.sh`
 
 # Wishlist
 
