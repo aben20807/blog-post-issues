@@ -40,8 +40,20 @@ skip = true
 只會顯示 h1 ~ h3 過長會變成 ...
 ### test中文 1-12sdofjsojdfojasodjfosjofdsoifjaosjdofj
 
-# Code section
-```c
+# Code section [ref](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences)
+
+<pre>
+```c {linenos=table,hl_lines=[2,"4-6"],linenostart=199}
+#include <stdio.h>
+int main()
+{
+    int a = 0;
+    return a;
+}
+```
+</pre>
+
+```c {linenos=table,hl_lines=[2,"4-6"],linenostart=199}
 #include <stdio.h>
 int main()
 {
@@ -130,3 +142,39 @@ __*粗斜體*__
 {{&lt; youtube &quot;<span>https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500</span>&quot; &gt;}}
 </pre>
 {{< youtube "https://www.youtube.com/watch?v=jC3jnC1dsAg?t=500" >}}
+
+
+# Section [ref](https://codepen.io/DobsonDev/pen/GgRJwv)
+<pre>
+{{&lt; alert info >}}
+**Beware !** is a text
+{{&lt; /alert >}}
+
+{{&lt; alert success >}}
+**Beware !** is a text
+{{&lt; /alert >}}
+
+{{&lt; alert warning >}}
+**Beware !** is a text
+{{&lt; /alert >}}
+
+{{&lt; alert danger >}}
+**Beware !** is a text
+{{&lt; /alert >}}
+</pre>
+
+{{< alert info >}}
+**Beware !** is a text
+{{< /alert >}}
+
+{{< alert success >}}
+**Beware !** is a text
+{{< /alert >}}
+
+{{< alert warning >}}
+**Beware !** is a text
+{{< /alert >}}
+
+{{< alert danger >}}
+**Beware !** is a text
+{{< /alert >}}

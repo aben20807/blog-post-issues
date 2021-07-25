@@ -8,15 +8,18 @@ credit = "https://unsplash.com/photos/icoCwXaxLL8"
 thumbnail = ""
 comments = true
 categories = ["編譯器"]
-tags = ["flex", "bison", "compiler", "lex", "yacc"]
+tags = ["flex", "compiler", "lex", "regexp"]
 toc = true
 draft = true
 +++
 <!-- https://drive.google.com/uc?export=view&id= -->
 
+詞法分析器 (Scanner)
+
 <!--more-->
 
 + Series: [[ep0]]({{< ref "/posts/20210722-build-a-simple-compiler-ep0" >}}), [[ep1]]({{< ref "/posts/20210722-build-a-simple-compiler-ep1" >}}), [[ep2]]({{< ref "/posts/20210722-build-a-simple-compiler-ep2" >}}), [[ep3]]({{< ref "/posts/20210722-build-a-simple-compiler-ep3" >}})
++ Source code: [aben20807/learn_compiler](https://github.com/aben20807/learn_compiler)
 
 # 詞法分析器 (Scanner)
 
@@ -36,9 +39,12 @@ draft = true
 # flex (lex) 三大區塊
 
 用兩個 `%%` 來作為區隔:
-+ Definition section: 又分作兩個小區塊 (可對照下方完整程式碼): %{ 定義標頭檔、全域變數 %}、正規表達式標籤
++ Definition section: 又分作兩個小區塊 (可對照下方完整程式碼): %{ 定義標頭檔、全域變數 %}、正規表達式標籤、condition (`%x`) [^cond]、選項 (`%option`) [^opt]
 + Rules section: 定義判斷為 token 的規則。定義的順序會影響優先度所以要考慮是否會覆蓋其他規則，例如關鍵字應該要優先於變數名，否則像是 `decl`, `print` 會被判定為 ident。這同時也是為何 `.` (匹配所有字元) 會放在最下面
 + C Code section: 定義 main 函式、其他函式
+
+[^cond]: https://www.cs.virginia.edu/~cr4bd/flex-manual/Start-Conditions.html
+[^opt]: https://www.cs.virginia.edu/~cr4bd/flex-manual/Scanner-Options.html#Scanner-Options
 
 ```
 << Definition section >>
@@ -52,6 +58,9 @@ draft = true
 << C Code section >>
 ```
 
+# 正規表達式
+
+這裡主要利用正規表達式 (Regular Expression, regex, regexp, RE) 來判斷一個輸入中有那些 token，例如 `apple` 不是任何一個保留關鍵字，所以就是一般的變數名稱。由於本系列所採用的是簡化版的語言，變數只有大小寫字母組成，所以這裡就直接定義 `ident` 個標籤負責對應 `{letter}+` 其中 `letter` 對應 a~z 或是 A~Z 其中一個字元。
 
 # 完整程式碼
 
@@ -112,25 +121,6 @@ int main(int argc, char *argv[])
 }
 ```
 
-+ `Makefile`:
-```makefile
-CC := gcc
-CFLAGS := -Wall
-SRC := mycompiler.l
-TARGET := myscanner
-
-all: ${TARGET}
-
-${TARGET}: lex.yy.c
-	@${CC} ${CFLAGS} -o $@ $<
-
-lex.yy.c: ${SRC}
-	@lex ${SRC}
-
-clean:
-	@rm -f ${TARGET} lex.*
-```
-
 # 測試範例
 
 + `input/in01.lc`:
@@ -141,7 +131,7 @@ decl num = x + y * (3 + 5)
 print num
 ```
 
-+ Result:
++ Result (其他檔案，如 Makefile 請參考 Source code):
 ```
 $ make
 $ ls
@@ -181,5 +171,7 @@ Finish scanning.
 
 # References
 
++ [Lexical Analysis With Flex, for Flex 2.6.2](https://westes.github.io/flex/manual/)
++ [Lexical Analysis With Flex, for Flex 2.6.3](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html#Top)
 + [westes/flex](https://github.com/westes/flex)
 + [YY_NO_UNPUT, YY_NO_INPUT](https://stackoverflow.com/questions/39075510/option-noinput-nounput-what-are-they-for)

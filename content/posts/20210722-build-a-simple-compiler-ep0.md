@@ -14,19 +14,28 @@ draft = true
 +++
 <!-- https://drive.google.com/uc?export=view&id= -->
 
+說明及事前準備
+
 <!--more-->
 
 + Series: [[ep0]]({{< ref "/posts/20210722-build-a-simple-compiler-ep0" >}}), [[ep1]]({{< ref "/posts/20210722-build-a-simple-compiler-ep1" >}}), [[ep2]]({{< ref "/posts/20210722-build-a-simple-compiler-ep2" >}}), [[ep3]]({{< ref "/posts/20210722-build-a-simple-compiler-ep3" >}})
++ Source code: [aben20807/learn_compiler](https://github.com/aben20807/learn_compiler)
 
 # 前言
 
 雖然好像很多相關資料了，但我覺得還是欠缺完整性，所以就寫了這個系列來補全。儘管還是有少數人無論如何都選擇直接抄襲同學這條路，但還是希望透過本系列能夠清楚完整的帶領完全沒概念的人走一遍，藉此降低這些行為。
 
-本系列內容為使用 flex/bison (lex/yacc) 建構一個簡易的編譯器，並使其產生的 jasmin 指令可在 JVM 執行。
+雖然我算是蠻常使用本系列所介紹的這套工具了，不過可能還是會有錯誤的地方，還請各位不吝指教。
 
-## 注意事項
+# 本篇所建構的編譯器
 
-## 環境
+本系列內容為使用 flex/bison (lex/yacc) 建構一個簡易的編譯器，並使其產生的 jasmin 指令可在 JVM 執行。完整執行流程如下。我們會利用 flex 產生 scanner，利用 bison 產生 parser。
+
+![流程，橘色區塊為本系列需要寫程式的部分](https://lh3.googleusercontent.com/pw/AM-JKLVfavnVca_5BLSfCjR9c4-qX2B3aClIeT0xi-dKP7OA3I6YQ6wpE7Xpesp1-TiV7scUERknJm54uRRowNcFRd1vm7irZP_97aKpwDJMTSH8d5B0bcyF6whs077_llSwlHZyCey4jSwH4XqjpQ8O2vJ5pQ=w551-h281-no)
+
+# 環境設定
+
+## 作業系統
 
 + OS: Ubuntu 18.04 (我使用 WSL2)
 
@@ -71,9 +80,6 @@ draft = true
 + 未標示運算子優先順序，但是符合先乘除後加減，括號優先度最高。
 
 ```
-Program -> Statement Program
-        | null
-
 Statement -> DeclStmt
           | PrintStmt
 
@@ -100,6 +106,7 @@ decl num = x + y * (3 + 5)
 print num
 ```
 
-# Q&A
+# Q&A (僅代表本人意見)
 
-+ 為何作業沒有部份給分
++ Q 為何編譯系統為必修?
++ Q 為何作業沒有部份給分?
