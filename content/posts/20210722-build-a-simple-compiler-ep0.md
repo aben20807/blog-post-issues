@@ -1,7 +1,7 @@
 +++
 title = "Build a Simple Compiler Ep0"
 date = "2021-07-22T17:17:52+08:00"
-url = "/posts/20210722-build-a-simple-compiler-with-flex-bison-ep0"
+url = "/posts/20210722-build-a-simple-compiler-ep0"
 description = ""
 image = "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
 credit = "https://unsplash.com/photos/vrbZVyX2k4I"
