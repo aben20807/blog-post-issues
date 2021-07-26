@@ -178,3 +178,19 @@ __*粗斜體*__
 {{< alert danger >}}
 **Beware !** is a text
 {{< /alert >}}
+
+# Details, summary section
+
+<pre>
+{{&lt; summary "Click~" >}}
+# OuO
+OuO
++ OuO
+{{&lt; /summary >}}
+</pre>
+
+{{< summary "Click~" >}}
+# OuO
+OuO
++ OuO
+{{< /summary >}}

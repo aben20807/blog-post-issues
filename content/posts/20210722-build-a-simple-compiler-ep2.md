@@ -10,7 +10,7 @@ comments = true
 categories = ["編譯器"]
 tags = ["flex", "bison", "compiler", "lex", "yacc", "jvm"]
 toc = true
-draft = true
+draft = false
 +++
 <!-- https://drive.google.com/uc?export=view&id= -->
 
@@ -120,8 +120,108 @@ STORE
 
 ![action 被執行的步驟](https://lh3.googleusercontent.com/pw/AM-JKLW6ZMC2XfsnZg8jHI64e3dKCSezHqXX3QGtvRlmC9ZN2z8isdz0fU7BpkalJRei9VrdiOMPcYX1J_cacpu3iiXN3EZaQPNdEoc72iKKLKHpykzNxfMX7wjvUHBtGh18vRx389qK2SxuOU-028GIcUStCw=w1371-h821-no)
 
+# 程式碼除錯
 
+有時候想要確認 shift、reduce 的中間過程可以加入下方兩行程式，不過就需要自行簡化輸入的程式不然會資訊量過多難以觀察。
 
+```c
+#define YYDEBUG 1
+int yydebug = 1;
+```
+
+## 測試範例
+
+```
+decl x = 2
+```
+
+{{< summary "輸出內容太多請點擊查看" >}}
+```
+$ ./mycompiler < input/in02.cl
+> Create symbol table
+Starting parse
+Entering state 0
+Reading a token: Next token is token DECL ()
+Shifting token DECL ()
+Entering state 1
+Reading a token: Next token is token IDENT ()
+Shifting token IDENT ()
+Entering state 8
+Reading a token: Next token is token '=' ()
+Shifting token '=' ()
+Entering state 18
+Reading a token: Next token is token NUMLIT ()
+Shifting token NUMLIT ()
+Entering state 9
+Reducing stack by rule 17 (line 166):
+   $1 = token NUMLIT ()
+NUMLIT 2
+-> $$ = nterm Operand ()
+Stack now 0 1 8 18
+Entering state 15
+Reducing stack by rule 14 (line 153):
+   $1 = nterm Operand ()
+-> $$ = nterm MulExpr ()
+Stack now 0 1 8 18
+Entering state 14
+Reading a token: Next token is token NEWLINE ()
+Reducing stack by rule 10 (line 136):
+   $1 = nterm MulExpr ()
+-> $$ = nterm AddExpr ()
+Stack now 0 1 8 18
+Entering state 13
+Next token is token NEWLINE ()
+Reducing stack by rule 8 (line 128):
+   $1 = nterm AddExpr ()
+-> $$ = nterm Expression ()
+Stack now 0 1 8 18
+Entering state 27
+Next token is token NEWLINE ()
+Shifting token NEWLINE ()
+Entering state 31
+Reducing stack by rule 6 (line 109):
+   $1 = token DECL ()
+   $2 = token IDENT ()
+   $3 = token '=' ()
+   $4 = nterm Expression ()
+   $5 = token NEWLINE ()
+> Insert {x} into symbol table; assign it as ref {0}
+IDENT x, ref: 0
+STORE
+-> $$ = nterm DeclStmt ()
+Stack now 0
+Entering state 6
+Reducing stack by rule 4 (line 104):
+   $1 = nterm DeclStmt ()
+-> $$ = nterm Statement ()
+Stack now 0
+Entering state 5
+Reading a token: Now at end of input.
+Reducing stack by rule 3 (line 100):
+-> $$ = nterm StatementList ()
+Stack now 0 5
+Entering state 17
+Reducing stack by rule 2 (line 99):
+   $1 = nterm Statement ()
+   $2 = nterm StatementList ()
+-> $$ = nterm StatementList ()
+Stack now 0
+Entering state 4
+Reducing stack by rule 1 (line 95):
+   $1 = nterm StatementList ()
+-> $$ = nterm Program ()
+Stack now 0
+Entering state 3
+Now at end of input.
+Shifting token $end ()
+Entering state 16
+Stack now 0 3 16
+Cleanup: popping token $end ()
+Cleanup: popping nterm Program ()
+> Dump symbol table
+Total lines: 2
+```
+{{< /summary >}}
 # 完整程式碼
 
 {{< alert danger >}}
