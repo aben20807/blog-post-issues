@@ -8,7 +8,7 @@ credit = "https://unsplash.com/photos/sZ9JQScjFfA"
 thumbnail = ""
 comments = true
 categories = ["編譯器"]
-tags = ["flex", "bison", "compiler", "lex", "yacc", "jvm", "bytecode"]
+tags = ["flex", "bison", "compiler", "lex", "yacc", "jvm", "bytecode", "[Build a Simple Compiler]"]
 toc = true
 draft = false
 +++
