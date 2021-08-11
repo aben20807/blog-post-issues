@@ -12,7 +12,7 @@ toc = false
 
 # 關於我
 
-我是黃柏瑄，沒啥綽號大家平常就都直接叫我柏瑄，最常用的表情符號是 OuO。目前是成功大學研究所的學生。目前自稱算是一個 vim 的重度使用者，本篇也是用 vim 編輯的。家住彰化，有產葡萄、芒果、香蕉 (當然都不是我自己種的 OAO)。
+我是黃柏瑄，沒啥綽號大家平常就都直接叫我柏瑄，最常用的表情符號是 OuO。目前是成功大學研究所 (實驗室: [ASRLab](https://chiaheng.wordpress.com/advanced-systems-research-lab/)) 的學生。目前自稱算是一個 vim 的重度使用者，本篇也是用 vim 編輯的 (最近...VSCode 真香)。家住彰化，有產葡萄、芒果、香蕉 (當然都不是我自己種的 OAO)。
 
 # 關於此部落格
 
@@ -20,7 +20,7 @@ toc = false
 目前算是剛建置，所以諸多不足還請包涵~~~  
 一些這個網站的 Markdown 的用法可以參考：[features]({{< ref "/posts/features" >}})   
 維護網站的專案一樣是開源的喔，可以去翻翻有用的東西 OuO - [repo 傳送門](https://github.com/aben20807/blog-post)  
-如果有什麼願望清單的話可以發個 [issue](https://github.com/aben20807/blog-post/issues) 喔 (雖然....QuQ)
+如果有什麼願望清單的話可以發個 [issue](https://github.com/aben20807/blog-post/issues) 喔 (雖然...QuQ)
 
 # 授權方式
 
@@ -44,5 +44,10 @@ toc = false
 
 + SlideShare: [aben20807](https://www.slideshare.net/aben20807)
 + speakerdeck: [aben20807](https://speakerdeck.com/aben20807)
+
+# Publications [[ORCID]](https://orcid.org/0000-0002-7458-9634)
+
++ Conference papers:
+1. **Po-Hsuan Huang**, Chia-Heng Tu, and Shen-Ming Chung. 2021. TONIC: towards oblivious neural inference compiler. In Proceedings of the 36th Annual ACM Symposium on Applied Computing (SAC '21).
 
 # ???贊助
