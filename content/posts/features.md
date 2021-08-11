@@ -105,6 +105,20 @@ __*粗斜體*__
   1. OuO
   2. QuQ
 
+# 表格
+
+```
+|A|B|C|
+|-|-|-|
+|a|b|c|
+|d|e|f|
+```
+
+|A|B|C|
+|-|-|-|
+|a|b|c|
+|d|e|f|
+
 # 引用
 
 ```
@@ -131,6 +145,14 @@ __*粗斜體*__
 ![google-title here](https://drive.google.com/open?id=1LipAb-4seXENzvyjSYbgtCqEQUfzGziC)
 ```
 ![google-title here](https://drive.google.com/open?id=1LipAb-4seXENzvyjSYbgtCqEQUfzGziC)
+
+# 數學式
+
+要行內顯示的話在左右各使用一個 `$` 包著, e.g., `\$x + y = z\$`: $x + y = z$
+
+使用 `$$` 會置中顯示, e.g., `\$\$a \times b = c\$\$`
+
+$$a \times b = c$$
 
 # YouTube
 <pre>

@@ -2,7 +2,7 @@
 title = "Use VSCode to Write LaTeX Paper"
 date = "2021-08-11T13:50:05+08:00"
 url = "/posts/20210811-use-vscode-to-write-latex-paper"
-description = ""
+description = "Show how to use vscode to edit and compile Latex for paper writing. We use MiKTex toolkit in windows 10 with some plugins of vscode to do so."
 image = "https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
 credit = "https://unsplash.com/photos/5cFwQ-WMcJU"
 thumbnail = ""
@@ -13,6 +13,8 @@ toc = true
 draft = false
 +++
 <!-- https://drive.google.com/uc?export=view&id= -->
+
+記錄一下如何用 VSCode 寫 paper
 
 <!--more-->
 
