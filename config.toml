@@ -6,6 +6,7 @@ theme = "hugOuO"
 DefaultContentLanguage = "zh"
 enableEmoji = true
 pygmentsCodeFences = true           # for code highlighting
+pygmentsStyle = "monokai"
 enableInlineShortcodes = true
 googleAnalytics = "UA-123296010-2"
 disqusShortname = "forrecording"
