@@ -8,7 +8,7 @@ credit = "https://unsplash.com/photos/5cFwQ-WMcJU"
 thumbnail = ""
 comments = true
 categories = ["軟體工具"]
-tags = ["latex", "vscode", "miktex"]
+tags = ["latex", "vscode", "miktex", "powershell"]
 toc = true
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Use Matplotlib to Plot Academic Figures"
 date = "2021-08-12T13:18:37+08:00"
 url = "/posts/20210812-use-matplotlib-to-plot-academic-figures"
 description = "Use matplotlib and SciencePlots to plot basic academic figures in windows 10 with powershell"
-image = "https://lh3.googleusercontent.com/pw/AM-JKLXWLmIX4NOWNKG3tit6cQ4QqxAljv5FeRz38FrMnccL6D7r8D2YVe2MXIeoBizxWh7e_vgOQsorNL5pKIG8FSACeBUnkywjCUdfWh2XZLiGPDY1ku5Y_pbknfw3Aif_71nbMFdRT75hE_uhe7KmK9tL9A=w1891-h1080-no"
+image = "https://lh3.googleusercontent.com/pw/AM-JKLWQU7NG5P2FICQUsbsbsSnd4OvpK-J5gAkHa9oU5S-lsJ7sKXktgA6WWqHpPY90VfQLGi9XvBid3PoGZ6kM0Bfdu8Q9V8E4H_mG3flfFYzpYX2xUKvOgck0jmvXV8Thaoq7sNv4pY3K2PCWUlrF-Ft2ow=w1891-h1112-no"
 credit = ""
 thumbnail = ""
 comments = true
@@ -153,7 +153,7 @@ with plt.style.context(['science', 'ieee']):
         # Plot special points
         for x, y in zip(table[col_names[0]], table[col_name]):
             if (x, col_name) in add_dot_points:
-                ax.plot(x, y, marker=".", markersize=4, color=line[0].get_color())
+                ax.plot(x, y, marker=".", markersize=4, color=line[0].get_color(), linestyle=line[0].get_linestyle())
 
 
     ax.legend(fontsize=6) # according to col_label_names
@@ -185,7 +185,9 @@ with plt.style.context(['science', 'ieee']):
     + [48] ~ [56] 設定 x、y 軸資訊
     + [61] 存成 pdf
 + 成果
-![折線圖](https://lh3.googleusercontent.com/pw/AM-JKLVRuXJ_D4kAHvBiLUnd0ZWrsFPlulrVEN38RvmizykmT85sxj3YvLEKvhSlvPg3TuEArI9VyFbEMxSUnTH0x6I3U1IR1ulU_xDOpyiZa-yO9KTioHJLjxhOVzzc4S559_IPZY_kdHSszjQhDndC8PtUYw=w1738-h1301-no)
+![折線圖](https://lh3.googleusercontent.com/pw/AM-JKLXIabK6jEA9LyeJs0waYEXbROoY0OIfFGN8i2JckUubn_eMd6YrGWZsLjEnhiH0_oym_7TYHVlbima_KBLsDxEQhmB_tYKyDcAI0pPFcQkJKsxVrcHxbMcuxaARAGxk9kaNiI3HA_nRXbia5RuxmjnJLQ=w1738-h1301-no)
+
+[2021.08.13] 修正 linestyle
 
 # 其他
 
