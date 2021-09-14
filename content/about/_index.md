@@ -17,7 +17,7 @@ toc = false
 # 關於此部落格
 
 此網站所記錄的題材並沒有設限，主要以資訊相關為主，不過會跟之前的"記錄用"不太一樣，會多一點生活相關的記錄 (儘量啦)，另外也會有一些家裡種的水果的介紹 (應該啦)，總之就比較隨性一點 (算是吧)。對了，沒意外的話會把舊網站搬過來喔 (大概吧)。  
-目前算是剛建置，所以諸多不足還請包涵~~~  
+目前算是剛建置，所以諸多不足還請包涵\~\~\~  
 一些這個網站的 Markdown 的用法可以參考：[features]({{< ref "/posts/features" >}})   
 維護網站的專案一樣是開源的喔，可以去翻翻有用的東西 OuO - [repo 傳送門](https://github.com/aben20807/blog-post)  
 如果有什麼願望清單的話可以發個 [issue](https://github.com/aben20807/blog-post/issues) 喔 (雖然...QuQ)
@@ -32,6 +32,7 @@ toc = false
 + Linkedin: [PO HSUAN HUANG](https://www.linkedin.com/in/po-hsuan-huang-6587b6117/)
 + GitHub: [aben20807](https://github.com/aben20807)
 + Blogger (舊網站): [記錄用](https://aben20807.blogspot.com/)
++ Gravatar online profile: [aben20807](https://en.gravatar.com/aben20807)
 
 # 其他作品
 
