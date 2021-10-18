@@ -10,7 +10,7 @@ comments = true
 categories = ["軟體工具"]
 tags = ["ubuntu", "ime", "hime"]
 toc = false
-draft = true
+draft = false
 +++
 <!-- https://drive.google.com/uc?export=view&id= -->
 
